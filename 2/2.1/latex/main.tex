@@ -1,0 +1,63 @@
+\documentclass[a4paper, 12pt]{article}
+
+\newcommand{\languages}{french, english}
+
+\input{include/head.tex}
+
+%%%%%%%%%%%%%%%%%%%
+
+\newgeometry{margin = 2.5cm}
+
+%%%%%%%%%%%%%%%%%%% maketitle
+
+\title{Results of project 2 – part 1}
+\author{\textsc{Rozet} François}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\pagenumbering{gobble}
+	\maketitle
+	Choices of degrees of freedom :
+	\begin{enumerate}[noitemsep]
+		\item The vertical variation in position $y$ of the system's (beam and cylinder) mass center respectively to the balance position.
+		\item The tilt $\theta$ of the system respectively to the horizontal.
+	\end{enumerate}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width = 0.6\textwidth]{resources/tikz/system/system.pdf}
+		\caption{Degrees of freedom of the system.}
+	\end{figure}
+	\begin{align*}
+		\underline{\underline{\bm K}} & = 
+		\begin{bmatrix}
+			\unit{\num{21000}}{\newton\per\meter} & \unit{\num{-2037}}{\newton}          \\
+			\unit{\num{-2037}}{\newton}           & \unit{\num{4450}}{\newton\usk\meter}
+		\end{bmatrix}
+		&
+		\underline{\underline{\bm M}} & = 
+		\begin{bmatrix}
+			\unit{\num{6.38}}{\kilogram}        & \unit{\num{0}}{\kilogram\usk\meter}              \\
+			\unit{\num{0}}{\kilogram\usk\meter} & \unit{\num{0.7784}}{\kilogram\usk\meter\squared}
+		\end{bmatrix}
+	\end{align*}
+	\begin{align*}
+		\omega_1 & = \unit{\num{8.6962}}{\hertz} & \underline{\bm x}_1 = &
+		\begin{bmatrix}
+			\unit{\num{1}}{\meter}    \\
+			\unit{\num{0.9583}}{\rad}
+		\end{bmatrix} \\
+		\omega_2 & = \unit{\num{12.3514}}{\hertz} & \underline{\bm x}_2 = &
+		\begin{bmatrix}
+			\unit{\num{-0.1169}}{\meter} \\
+			\unit{\num{1}}{\rad}
+		\end{bmatrix} \\
+	\end{align*}
+	\begin{mdframed}[linewidth=1pt]
+		Coordinates of the vibration node for the mode $\underline{\bm x}_2$ :
+		\begin{align*}
+			\unit{\num{0.1639}}{\meter}
+		\end{align*}
+	\end{mdframed}
+\end{document}
