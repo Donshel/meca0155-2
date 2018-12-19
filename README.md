@@ -15,3 +15,4 @@ Projects realized as part of the course *Dynamics of mechanical systems* given b
 
 * Project 1 received a score of 9/10.
 * Project 2.1 received a score of 10/10.
+* Project 2.2 received a score of 9/10.
