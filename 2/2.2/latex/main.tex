@@ -28,11 +28,11 @@
 		\begin{tabular}{|c|c|c|c|c|c|}
 			\hline
 			Mode \no & \makecell{Measured\\frequency $[\hertz]$} & \makecell{2 DOF\\model $[\hertz]$} & \makecell{Relative\\error $[\%]$} & \makecell{Rayleigh-Ritz\\method $[\hertz]$} & \makecell{Relative\\error $[\%]$} \\ \hline\hline
-			   1     &               \num{8.8293}                &            \num{8.6962}            &            \num{-1.51}            &                \num{8.6624}                 &            \num{-1.89}            \\ \hline
-			   2     &              \num{1.2281e1}               &           \num{1.2351e1}           &            \num{0.57}             &               \num{1.2308e1}                &            \num{0.21}             \\ \hline
-			   3     &              \num{6.3681e1}               &                 --                 &                --                 &               \num{6.4597e1}                &            \num{1.44}             \\ \hline
-			   4     &              \num{1.6098e2}               &                 --                 &                --                 &               \num{1.6082e2}                &            \num{-0.10}            \\ \hline
-			   5     &              \num{3.2303e2}               &                 --                 &                --                 &               \num{3.2506e2}                &            \num{0.63}             \\ \hline
+			   1     &               \num{8.8293}                &            \num{8.6962}            &            \num{-1.51}            &                \num{8.6615}                 &            \num{-1.90}            \\ \hline
+			   2     &              \num{1.2281e1}               &           \num{1.2351e1}           &            \num{0.57}             &               \num{1.2292e1}                &            \num{0.08}             \\ \hline
+			   3     &              \num{6.3681e1}               &                 --                 &                --                 &               \num{6.4170e1}                &            \num{0.77}             \\ \hline
+			   4     &              \num{1.6098e2}               &                 --                 &                --                 &               \num{1.6055e2}                &            \num{-0.27}            \\ \hline
+			   5     &              \num{3.2303e2}               &                 --                 &                --                 &               \num{3.2255e2}                &            \num{-0.15}             \\ \hline
 		\end{tabular}
 		\caaption{Frequencies}
 		\label{table:frequencies}
@@ -57,7 +57,7 @@
 	\end{figure}
 	\clearpage
 	\section*{Conclusions}
-	In terms of frequency, both the 2 DOF model and the Rayleigh-Ritz method are close to the experimental measurements. The small relative errors ($\pm 1 \%$) could be due to inaccurate initial hypotheses. For example, we assumed in our analysis that the system was undamped which is actually impossible. Further, mechanical characteristics of the system such as masses, stiffnesses, dimensions, etc... could be imprecise as well. However, it seems that these approximations aren't entirely missguided given they produce good prectictions. \par
+	In terms of frequency, both the 2 DOF model and the Rayleigh-Ritz method are close to the experimental measurements. The small relative errors ($\pm 1 \%$) could be due to inaccurate initial hypotheses. For example, we assumed in our analysis that the system was undamped which is actually impossible. Further, mechanical characteristics of the system such as masses, stiffnesses, dimensions, etc... could be imprecise as well. However, it seems that these approximations aren't entirely missguided given they produce good predictions. \par
 	Nevertheless, we notice that the frequencies of the 2 DOF model are greater than Rayleigh-Ritz ones. But we know that Rayleigh-Ritz estimated frequencies are always greater than real ones. Therefore, the lowest frequencies are always the best. The 2 DOF model being equivalent to a Rayleigh-Ritz method with two degree of freedom, we can assume that the Rayleigh-Ritz results are better. \par
 	In terms of modes, the Rayleigh-Ritz estimations are quite close to the measurements, as show figures \ref{figure:modeshape12}, \ref{figure:modeshape3} and \ref{figure:modeshape45}.
 \end{document}

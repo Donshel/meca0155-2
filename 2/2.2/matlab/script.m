@@ -78,7 +78,7 @@ string(2).pos = [0.4; - beam.dim(2) / 2; 0]; % m
 %% Symbolic computation
 
 % Parameters
-syms mb mc xc x1 x2 k1 k2 l E Iz;
+syms mb mc xc Jc x1 x2 k1 k2 l E Iz;
 
 % Generelized coordinates
 syms x;
@@ -91,13 +91,14 @@ for i = 1:size(w, 1)
     w(i) = f^(i - 1);
 end
 
-M = (mb / l) * int(w * transpose(w), x, -l/2, l/2) + mc * subs(w * transpose(w), x, xc);
+M = (mb / l) * int(w * transpose(w), x, -l/2, l/2) + mc * subs(w * transpose(w), x, xc) + Jc * subs(diff(w, x) * transpose(diff(w, x)), x, xc);
 K = E * (Iz / l) * int(diff(w, x, 2) * transpose(diff(w, x, 2)), x, -l/2, l/2) + k1 * subs(w * transpose(w), x, x1) + k2 * subs(w * transpose(w), x, x2);
 
 %% Substitution
 
 mb = beam.mass;
 mc = cyl.mass;
+Jc = cyl.J(3) + cyl.mass * cyl.pos(2)^2;
 xc = cyl.pos(1);
 x1 = string(1).pos(1);
 x2 = string(2).pos(1);
@@ -151,13 +152,13 @@ i = 1;
 
 if i == 1
     plot(dom, zeros(size(dom)), P, modes(:, 1), 'o', dom, y_the{1}, dom, y_2dof{1}, P, modes(:, 2), 'o', dom, y_the{2}, dom, y_2dof{2});
-    legend('undeformed', 'experimental n�1', 'rayleigh-ritz n�1', '2DOF n�1', 'experimental n�2', 'rayleigh-ritz n�2', '2DOF n�2');
+    legend('undeformed', 'experimental n1', 'rayleigh-ritz n1', '2DOF n1', 'experimental n2', 'rayleigh-ritz n2', '2DOF n2');
 elseif i == 2
     plot(dom, zeros(size(dom)), P, modes(:, 3), 'o', dom, y_the{3});
-    legend('undeformed', 'experimental n�3', 'rayleigh-ritz n�3');
+    legend('undeformed', 'experimental n3', 'rayleigh-ritz n3');
 elseif  i == 3
     plot(dom, zeros(size(dom)), P, modes(:, 4), 'o',  dom, y_the{4}, P, modes(:, 5), 'o', dom, y_the{5});
-    legend('undeformed', 'experimental n�4', 'rayleigh-ritz n�4', 'experimental n�5', 'rayleigh-ritz n�5');
+    legend('undeformed', 'experimental n4', 'rayleigh-ritz n4', 'experimental n5', 'rayleigh-ritz n5');
 end
 
 xlabel('x [m]');
