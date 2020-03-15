@@ -9,7 +9,7 @@ Projects realized as part of the course *Dynamics of mechanical systems* given b
 
 ## Authors
 
-* **François Rozet** - [Donshel](https://github.com/Donshel)
+* **François Rozet** - [francois-rozet](https://github.com/francois-rozet)
 
 ## Score
 
